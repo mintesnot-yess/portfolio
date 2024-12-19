@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 
 .container {
     max-width: 1200px;
-    width: 100%;
+    width: 95%;
     margin: auto;
     position: relative;
 
@@ -208,7 +208,7 @@ nav ul {
         z-index: 1;
         background: var(--primary-color);
         border-radius: 10px;
-        height: 100vh;
+        height: 90vh;
         overflow: hidden;
 
 
@@ -449,16 +449,6 @@ main article {
         height: fit-content;
     }
 
-
-
-
-}
-
-@media (max-width:400px) {
-    :root {
-        --hero-title-font-size: 2.6rem;
-    }
-
     nav .bar {
         display: block;
     }
@@ -476,4 +466,15 @@ main article {
 
         }
     }
+
+
+
+}
+
+@media (max-width:400px) {
+    :root {
+        --hero-title-font-size: 2.6rem;
+    }
+
+
 }
