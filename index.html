@@ -26,6 +26,7 @@
 
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#service">services</a></li>
                     <li><a href="#">projects</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
@@ -101,6 +102,49 @@
             </div>
 
 
+            <div id="service" class="service">
+                <div class="header">
+                    <h1 class="text-center title-text  ">My Services</h1>
+                </div>
+                <div class="services">
+                    <div class="service-item">
+                        <i class="fa-brands fa-css3"></i>
+                        <h3>Web Design Trends</h3>
+                        <p>Current website design trends focus on clean layouts, bold typography, dark mode, and
+                            interactive elements.
+
+                        </p>
+                    </div>
+
+
+                    <div class="service-item">
+                        <i class="fa fa-server"></i>
+                        <h3>Server Side Development</h3>
+                        <p>My server-side development approach is centered on creating powerful, scalable, and secure
+                            backend systems.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile App Development</h3>
+                        <p>My mobile app development strategy focuses on creating user-friendly apps that work on
+                            multiple platforms. </p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fa fa-brush"></i>
+                        <h3>website creation platforms</h3>
+                        <p>My website creation platforms include WordPress, Figma, and Wix.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Game Development</h3>
+                        <p>My game development approach centers on creating immersive and engaging experiences for
+                            players.</p>
+                    </div>
+                </div>
+
+            </div>
+
+
 
         </main>
 
@@ -125,13 +169,13 @@
 
         bar.addEventListener("click", () => {
             let nav = document.querySelector("nav ul");
-            if (nav.style.height == "160px") {
+            if (nav.style.height == "200px") {
                 nav.style.height = 0;
                 bar.classList.add("fa-bars")
                 bar.classList.remove("fa-times")
 
             } else {
-                nav.style.height = "160px";
+                nav.style.height = "200px";
                 bar.classList.add("fa-times")
                 bar.classList.remove("fa-bars")
 
