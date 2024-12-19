@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+        integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#">
+                        M
+                    </a>
+                </div>
+
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">projects</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+                <div id="bar" class="bar fas fa-bars">
+                </div>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <div class="content">
+                <h1><span>Mintesnot-Yesmashewa</span></h1>
+                <div class="text">
+                    <section>
+                        <span>
+                            I'm A
+                        </span>
+                        <ul>
+                            <li>Front-End </li>
+                            <li>Back-Eng </li>
+                        </ul>
+                        <span>Developer</span>
+                    </section>
+                </div>
+            </div>
+            <div class="image">
+                <img src="assets/images/hero.png" alt="" srcset="" />
+            </div>
+
+        </div>
+        <main>
+
+            <div id="about">
+                <h2 class="text-center title-text">About Me</h2>
+                <article>
+
+                    <section class="image">
+                        <img src="assets/images/image.png" alt="">
+
+                    </section>
+                    <section class="details">
+                        <h3> I'm Mintesnot Yesmashewa, A Frontend and Backend Developer </h3>
+                        <p>
+                            I am a motivated and detail-oriented full-stack web developer with four years of experience
+                            in designing and building responsive, user-friendly web applications. I am skilled in both
+                            front-end and back-end development and have hands-on expertise with a range of technologies.
+                            My focus is on creating scalable, maintainable, and efficient applications that deliver
+                            exceptional user experiences.
+                        </p>
+                        <div class="detail">
+                            <ul>
+                                <li><strong>Name:</strong> Mintesnot Yesmashewa</li>
+                                <li><strong>Age:</strong> 21</li>
+                            </ul>
+                            <ul>
+                                <li><strong>Email:</strong> <a
+                                        href="mileto:mintesnotyess@gmail.com">mintesnotyess@gmail.com <i
+                                            class="fa-solid fa-up-right-from-square"></i> </a>
+                                </li>
+                                <li><strong>from:</strong> Ethiopia | Addis Ababa</li>
+                            </ul>
+                        </div>
+                        <div class="links">
+                            <a href=""><i class="fa-brands fa-github"></i> </a>
+                            <a href=""><i class="fa-brands fa-youtube"></i> </a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i> </a>
+                            <a href=""><i class="fa-brands fa-telegram"></i> </a>
+                            <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                            <a href=""><i class="fa-brands fa-x"></i> </a>
+
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+
+
+        </main>
+
+
+        <main>
+            <!-- sample list -->
+
+        </main>
+    </div>
+    <script>
+        var currentIndex = 0;
+        let skillsDiv = document.querySelectorAll(".text section ul li");
+        let bar = document.getElementById("bar");
+        skillsDiv[currentIndex].style.height = "40px";
+        // for each skill 
+        setInterval(() => {
+            skillsDiv[currentIndex].style.height = "0px";
+            currentIndex = (currentIndex + 1) % skillsDiv.length;
+            skillsDiv[currentIndex].style.height = "40px";
+
+        }, 3000);
+
+        bar.addEventListener("click", () => {
+            let nav = document.querySelector("nav ul");
+            if (nav.style.height == "160px") {
+                nav.style.height = 0;
+                bar.classList.add("fa-bars")
+                bar.classList.remove("fa-times")
+
+            } else {
+                nav.style.height = "160px";
+                bar.classList.add("fa-times")
+                bar.classList.remove("fa-bars")
+
+
+            }
+        }
+
+        )
+
+
+    </script>
+</body>
+
+</html>
