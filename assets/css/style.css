@@ -40,6 +40,7 @@ body::-webkit-scrollbar-thumb {
 
 }
 
+
 .container {
     max-width: 1200px;
     width: 95%;
@@ -437,12 +438,15 @@ main article {
 
     flex-direction: column;
     justify-content: center;
+    border: solid 1px var(--primary-color);
+
 }
 
 .service-item i {
     font-size: 40px;
     color: var(--primary-color);
     margin-bottom: 10px;
+
 }
 
 .service-item h3 {
@@ -464,7 +468,7 @@ main article {
     .projects {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 25px;
 
 
     }
@@ -475,6 +479,10 @@ main article {
         border-radius: 10px;
         position: relative;
         overflow: hidden;
+        border: solid 1px var(--primary-color);
+        display: flex;
+        flex-direction: column;
+
 
 
         img {
@@ -487,28 +495,41 @@ main article {
 
         a {
             position: absolute;
-            bottom: 0;
+            top: 0;
             z-index: 2;
             left: 0;
             width: 80%;
+            height: 100%;
             opacity: 0;
-            height: 50px;
             text-decoration: none;
             font-size: 1.2rem;
             text-align: center;
-            background: var(--bg-color);
             color: var(--text-color-pre);
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: end;
             gap: 20px;
             overflow: hidden;
-            white-space: nowrap;
 
-            &:hover {
-                background: #272727;
+
+            span {
+                white-space: nowrap;
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                background: var(--bg-color);
+
+                &:hover {
+                    background: #272727;
+
+                }
 
             }
+
+
 
 
 
