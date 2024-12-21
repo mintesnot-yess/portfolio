@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="image">
-                <img src="assets/images/hero.png" alt="" srcset="" />
+                <img loading="lazy" src="assets/images/hero.png" alt="" srcset="" />
             </div>
 
         </div>
@@ -95,12 +95,22 @@
                             </ul>
                         </div>
                         <div class="links">
-                            <a href=""><i class="fa-brands fa-github"></i> </a>
-                            <a href=""><i class="fa-brands fa-youtube"></i> </a>
-                            <a href=""><i class="fa-brands fa-linkedin"></i> </a>
-                            <a href=""><i class="fa-brands fa-telegram"></i> </a>
-                            <a href=""><i class="fa-brands fa-facebook"></i> </a>
-                            <a href=""><i class="fa-brands fa-x"></i> </a>
+                            <a target="_blank" href="https://github.com/mintesnot-yess"><i
+                                    class="fa-brands fa-github"></i> </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/mintesnot-yesmashewa/"><i
+                                    class="fa-brands fa-linkedin"></i> </a>
+                            <a target="_blank" href="https://www.youtube.com/@mint_snot"><i
+                                    class="fa-brands fa-youtube"></i> </a>
+                            <a target="_blank" href="https://www.tiktok.com/@mint_snotyess"><i
+                                    class="fa-brands fa-tiktok"></i> </a>
+
+                            <a target="_blank" href="https://t.me/mint_snot"><i class="fa-brands fa-telegram"></i> </a>
+                            <a target="_blank" href="https://web.facebook.com/mintesnotyess/"><i
+                                    class="fa-brands fa-facebook"></i> </a>
+                            <a target="_blank" href="https://www.instagram.com/mintesnot_yess"><i
+                                    class="fa-brands fa-instagram"></i> </a>
+
+                            <a target="_blank" href="https://x.com/Minte_yess"><i class="fa-brands fa-x"></i> </a>
 
                         </div>
                     </section>
@@ -202,56 +212,9 @@
 
         </main>
     </div>
-    <script>
-        var currentIndex = 0;
-        let skillsDiv = document.querySelectorAll(".text section ul li");
-        let bar = document.getElementById("bar");
-        skillsDiv[currentIndex].style.height = "40px";
-        // for each skill 
-        setInterval(() => {
-            skillsDiv[currentIndex].style.height = "0px";
-            currentIndex = (currentIndex + 1) % skillsDiv.length;
-            skillsDiv[currentIndex].style.height = "40px";
-
-        }, 3000);
-
-        bar.addEventListener("click", () => {
-            let nav = document.querySelector("nav ul");
-            if (nav.style.height == "200px") {
-                nav.style.height = 0;
-                bar.classList.add("fa-bars")
-                bar.classList.remove("fa-times")
-
-            } else {
-                nav.style.height = "200px";
-                bar.classList.add("fa-times")
-                bar.classList.remove("fa-bars")
+    <script src="assets/js/script.js">
 
 
-            }
-        }
-
-        )
-
-
-        // page is loadig show loadging page
-        window.addEventListener("load", () => {
-            let loading = document.getElementById("loading");
-            let WindowsContainer = document.querySelector(".container");
-
-            WindowsContainer.style.display = "block";
-            document.body.style.overflow = "auto";
-            loading.style.scale = "3";
-            loading.style.opacity = "0";
-
-
-
-            setTimeout(function () {
-                loading.style.display = "none";
-
-            }, 2000)
-        }
-        )
 
 
     </script>
