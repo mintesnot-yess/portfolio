@@ -41,4 +41,3 @@ ProImages.forEach((image) => {
 })
 
 
-// page is loadig show loadging page
