@@ -19,6 +19,7 @@
     --hero-title-font-size: 4rem;
     --paragraph-font-size: 2rem;
     scroll-behavior: smooth;
+
 }
 
 
@@ -46,6 +47,8 @@ body::-webkit-scrollbar-thumb {
     width: 95%;
     margin: auto;
     position: relative;
+    display: none;
+
 
 }
 
@@ -257,6 +260,7 @@ main article {
     width: 100%;
     height: 100vh;
 
+
 }
 
 main article {
@@ -269,11 +273,12 @@ main article {
 
 
 
+
     .image {
         flex: 1 300px;
         height: 500px;
         background: var(--primary-color);
-        overflow: hidden;
+
 
 
         img {
@@ -281,6 +286,10 @@ main article {
             height: 100%;
             object-fit: contain;
             filter: brightness(.7) contrast(1.2) saturate(0) drop-shadow(-20px 0px 15px var(--black1));
+            animation: left-to-right-animation;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+
 
         }
     }
@@ -293,9 +302,15 @@ main article {
         gap: 10px;
 
 
+
         h3 {
             font-size: 2rem;
             line-height: 2rem;
+            animation: scale-animation;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+
+
 
         }
 
@@ -303,6 +318,11 @@ main article {
             font-size: 1.2rem;
             color: var(--text-color);
             line-height: 2rem;
+            animation: scale-animation;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+
+
 
         }
 
@@ -310,12 +330,21 @@ main article {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            animation: scale-animation;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+
 
             ul {
                 list-style: none;
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
+                animation: scale-animation;
+                animation-timeline: view();
+                animation-range: entry 0% cover 40%;
+
+
 
                 li {
                     display: flex;
@@ -349,10 +378,15 @@ main article {
         .links {
             display: flex;
             flex-wrap: wrap;
+            animation: scale-animation;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+
 
             a {
                 font-size: 2rem;
                 border-radius: 50%;
+
                 width: 50px;
                 height: 50px;
                 display: grid;
@@ -439,6 +473,11 @@ main article {
     flex-direction: column;
     justify-content: center;
     border: solid 1px var(--primary-color);
+    animation: scale-animation;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+
 
 }
 
@@ -470,7 +509,6 @@ main article {
         flex-wrap: wrap;
         gap: 25px;
 
-
     }
 
     .project-item {
@@ -482,6 +520,12 @@ main article {
         border: solid 1px var(--primary-color);
         display: flex;
         flex-direction: column;
+
+        animation: scale-animation;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+
+
 
 
 
@@ -552,6 +596,59 @@ main article {
     }
 }
 
+/* loading style */
+#loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(49, 49, 49);
+    z-index: 100;
+    display: grid;
+    place-content: center;
+    font-size: 4rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: loading-animation 2s linear infinite;
+}
+
+.loader::after {
+    animation-delay: 1s;
+}
+
+@keyframes loading-animation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
 @keyframes hero-image-animation {
     0% {
         transform: translateX(10%);
@@ -577,6 +674,30 @@ main article {
     to {
         opacity: 0;
     }
+
+
+}
+
+
+
+@keyframes left-to-right-animation {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+
+    }
+
+
+
+}
+
+@keyframes scale-animation {
+    0% {
+        scale: .9;
+        opacity: 0;
+    }
+
+
 
 
 }

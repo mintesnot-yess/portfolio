@@ -15,6 +15,11 @@
 </head>
 
 <body>
+
+
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
     <div class="cursor"></div>
     <div class="container">
         <header>
@@ -226,6 +231,26 @@
             }
         }
 
+        )
+
+
+        // page is loadig show loadging page
+        window.addEventListener("load", () => {
+            let loading = document.getElementById("loading");
+            let WindowsContainer = document.querySelector(".container");
+
+            WindowsContainer.style.display = "block";
+            document.body.style.overflow = "auto";
+            loading.style.scale = "3";
+            loading.style.opacity = "0";
+
+
+
+            setTimeout(function () {
+                loading.style.display = "none";
+
+            }, 2000)
+        }
         )
 
 
