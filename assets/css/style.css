@@ -384,11 +384,11 @@ main article {
 
 
             a {
-                font-size: 2rem;
+                font-size: 1.6rem;
                 border-radius: 50%;
 
-                width: 50px;
-                height: 50px;
+                width: 45px;
+                height: 45px;
                 display: grid;
                 place-content: center;
                 text-decoration: none;
@@ -399,6 +399,7 @@ main article {
 
                     i {
                         scale: .9;
+
                     }
                 }
             }
@@ -414,7 +415,8 @@ main article {
 .title-text {
     font-size: calc(var(--title-font-size));
     margin: 50px 0;
-    width: fit-content;
+    max-width: fit-content;
+    width: 100%;
     color: var(--text-color);
     padding: 20px 0;
 
@@ -614,19 +616,21 @@ main article {
 
 .form-section {
     flex: 1 380px;
-    padding: 10px;
-
-}
-
-.form-section h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: var(--primary-color);
-}
-
-.form-section form {
+    height: 100%;
     display: flex;
     flex-direction: column;
+
+
+}
+
+
+
+.form-section form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
 }
 
 .form-section form input,
@@ -646,7 +650,7 @@ main article {
 }
 
 .form-section form button {
-    padding: 12px;
+    padding: 12px 0;
     font-size: 16px;
     font-weight: bold;
     color: var(--primary-color);
@@ -664,7 +668,10 @@ main article {
 
 .contact-info {
     flex: 1 300px;
-    padding: 10px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
 }
 
@@ -682,9 +689,9 @@ main article {
 }
 
 .contact-info .info-item {
-    margin-bottom: 15px;
     font-size: 1.1rem;
     display: flex;
+
 
 }
 
@@ -697,6 +704,7 @@ main article {
     color: var(--text-color);
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 
     a {
         display: flex;
@@ -812,6 +820,20 @@ main article {
 @media (max-width:400px) {
     :root {
         --hero-title-font-size: 2.6rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.1rem;
+    }
+
+
+    .contact-info .info-item {
+        font-size: 1rem;
+        background: red;
+
+
+
+
     }
 
 
