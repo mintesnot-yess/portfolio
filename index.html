@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- favicon -->
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -24,7 +26,7 @@
             <nav>
                 <div class="logo">
                     <a href="#">
-                        M
+                        <img src="assets/images/logo.png" alt="">
                     </a>
                 </div>
 
@@ -200,15 +202,47 @@
                 </div>
 
             </div>
+            <h1 class="text-center title-text ">Get in Touch</h1>
+
+            <div class="contact">
+
+                <div class="form-section">
+                    <form onsubmit="sendEmail(event)">
+                        <input id="subject" name="subject" type="text" placeholder="Subject">
+                        <textarea required id="body" name="body" placeholder="Message"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <p>Always available for freelance work if the right project comes along. Feel free to contact me!
+                    </p>
+                    <div class="info-item">
+                        <i class="fas fa-user"></i><span>Name: Mintesnot Yesmashewa</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i><span>Location: <a target="_blank"
+                                href="https://maps.app.goo.gl/Y45WCKyivXimr7y69"> Ethiopia | Addis Ababa <i
+                                    class="fa-solid fa-up-right-from-square"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i><span>Call Me: <a target="_blank"
+                                href="tel: +251940134880">+251940134880 <i
+                                    class="fa-solid fa-up-right-from-square"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i><span>Email Me: <a target="_blank"
+                                href="mailto: mintesnotyess@gmail.com">
+                                mintesnotyess@gmail.com <i class="fa-solid fa-up-right-from-square"></i></a></span>
+                    </div>
+                </div>
+            </div>
 
 
         </main>
 
 
-        <main>
-            <!-- sample list -->
 
-        </main>
     </div>
     <script src="assets/js/script.js">
 

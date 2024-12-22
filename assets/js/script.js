@@ -33,11 +33,44 @@ let ProImages = document.querySelectorAll(".project img");
 ProImages.forEach((image) => {
 
     image.addEventListener("load", () => {
-        image.style.display = "block";
-        image.style.animation = ' left-to-right-animation 1s ease-in-out';
+
+        setTimeout(() => {
+            image.style.display = "block";
+            image.style.animation = ' left-to-right-animation 1s ease-in-out';
+        }, 1000)
+
 
 
     })
 })
 
 
+
+
+function sendEmail(e) {
+    e.preventDefault();
+    const subjectElement = document.getElementById('subject');
+    const bodyElement = document.getElementById('body');
+
+    // Trim input values to remove leading/trailing spaces
+    const subject = subjectElement.value.trim();
+    const body = bodyElement.value.trim();
+
+    // Validate subject and body fields
+    if (!subject) {
+        subjectElement.focus();
+        return;
+    }
+    if (!body) {
+        bodyElement.focus();
+        return;
+    }
+
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+    const email = "mintesnotyess@gmail.com";
+
+    // Construct and open the mailto link
+    const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+    window.location.href = mailtoLink;
+}
