@@ -75,19 +75,14 @@ nav {
 }
 
 nav .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 10%;
+    width: 40px;
+    height: 40px;
     display: grid;
     place-content: center;
 
+
     a {
         text-decoration: none;
-        color: var(--black1);
-        font-size: 2.5rem;
-        font-weight: bolder;
-        text-transform: uppercase;
-        border-radius: 10px;
 
         img {
             width: 100%;
@@ -110,7 +105,7 @@ nav .bar {
     border-radius: 5px;
     display: none;
 
-    &:hover {
+    y &:hover {
         background-color: var(--hover-color);
     }
 
