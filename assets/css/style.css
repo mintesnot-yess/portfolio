@@ -720,6 +720,50 @@ main article {
     }
 }
 
+footer {
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    display: flex;
+
+    justify-content: center;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+
+
+        a {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid;
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            position: absolute;
+            right: 0;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.2rem;
+
+        }
+
+        a:hover {
+            background-color: var(--hover-color);
+
+        }
+    }
+
+
+}
+
+
 
 @keyframes hero-image-animation {
     0% {
